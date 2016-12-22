@@ -1,0 +1,34 @@
+{
+  "name": "siyanie-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run copy && npm run resize && npm run minify",
+    "copy": "node copy",
+    "resize": "node resize",
+    "minify": "node minify",
+    "deploy": "gh-pages -d build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siyanie/siyanie-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/siyanie/siyanie-data/issues"
+  },
+  "homepage": "https://github.com/siyanie/siyanie-data#readme",
+  "keywords": [],
+  "author": "alanev",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^0.12.0",
+    "glob": "^7.1.1",
+    "imagemin": "^5.2.2",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.0",
+    "imagemin-webp": "^4.0.0",
+    "sharp": "^0.17.0"
+  }
+}
