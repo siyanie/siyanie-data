@@ -4,16 +4,20 @@ const writeFile = require('./utils/writeFile')
 
 const glob = prms(require('glob'))
 const { parse: parsePath } = require('path')
+const minifyJSON = require('node-json-minify')
+
 
 const processFiles = (files) => {
 
 	// Pass through the array of files
 	files.forEach(file => {
-		const { dir, base } = parsePath(file)
+		const { dir, base, ext } = parsePath(file)
 
 		readFile(file)
 			.then(buffer => {
-
+				if (ext === '.json') {
+					buffer = minifyJSON(buffer.toString())
+				}
 				writeFile(`./${dir.replace('data', 'build')}/${base}`, buffer)
 					.then(console.log)
 					.catch(console.error)
