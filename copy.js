@@ -34,3 +34,7 @@ glob('data/{videos,.}/*.{mp4,json}')
 glob('data/images/media/*')
 	.then(processFiles)
 	.catch(console.error)
+
+glob('data/pdf/*')
+	.then(processFiles)
+	.catch(console.error)
