@@ -29,6 +29,7 @@
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-pngquant": "^5.0.0",
     "imagemin-webp": "^4.0.0",
+    "mkdirp": "^0.5.1",
     "node-json-minify": "^1.0.0",
     "sharp": "^0.17.0"
   }

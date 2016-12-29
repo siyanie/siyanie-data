@@ -30,3 +30,7 @@ const processFiles = (files) => {
 glob('data/{videos,.}/*.{mp4,json}')
 	.then(processFiles)
 	.catch(console.error)
+
+glob('data/images/media/*')
+	.then(processFiles)
+	.catch(console.error)
